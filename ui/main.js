@@ -1,6 +1,8 @@
 //Counter code
 var button= document.getElementById('counter');
+
 button.onclick=function (){
+    
     //Creating a request onject
     var request= new XMLHttpRequest();
     
@@ -9,7 +11,7 @@ button.onclick=function (){
         if(request.readystate===XMLHttpRequest.DONE){
             //Take some action
             if (request.status===200){
-                var counter=reqest.responseText;
+                var counter=request.responseText;
                 var span=document.getElementById('count');
                 span.innerHTML=counter.toString();
             }
