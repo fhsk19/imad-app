@@ -37,7 +37,7 @@ app.get('/submit-name/:name', function (req, res) {
     var name=req.params.name;
     names.push(name);
     //JSON: JavaScript Object Notation 
-    res.send(names); //1000
+    res.send(JSON.stringify(names)); //1000
 });
 var port = 80;
 app.listen(port, function () {
