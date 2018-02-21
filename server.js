@@ -22,6 +22,7 @@ app.get('/counter',function(req,res){
 app.get('/article-three',function(req,res)  {
     res.send('Article three will be served here');
 });
+var names= 0;
 app.get('/submit-name/:name', function (req, res) {
     //Get the name from the request
     var name=req.params.name;
