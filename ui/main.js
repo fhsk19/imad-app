@@ -2,7 +2,7 @@
 var button= document.getElementById('counter');
 
 button.onclick=function (){
-    
+    var counter=0;
     //Creating a request onject
     var request= new XMLHttpRequest();
     
@@ -14,6 +14,7 @@ button.onclick=function (){
                 var counter=request.responseText;
                 var span=document.getElementById('count');
                 span.innerHTML=counter.toString();
+                counter=counter+1;
             }
         }//Not done yet
     }
