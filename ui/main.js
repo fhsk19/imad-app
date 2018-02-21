@@ -1,6 +1,5 @@
 //Counter code
-var button= document.getElementById('counter');
-
+var submit=document.getElementById('submit_btn');
 button.onclick=function (){
     
         //Creating a request onject
@@ -23,7 +22,10 @@ button.onclick=function (){
       }
         }//Not done yet
 };
+
 //Make a request
+var nameInput= document.getElementById('name');
+var name=nameInput.value;
 request.open('GET', 'http://fhsk19.imad.hasura-app.io/submit-name?name='+name,true);
 request.send(null);
 };
